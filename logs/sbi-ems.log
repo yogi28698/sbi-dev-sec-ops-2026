@@ -7710,3 +7710,94 @@ org.springframework.web.servlet.resource.NoResourceFoundException: No static res
 2026-04-15T11:38:25.027+05:30  INFO 11636 --- [restartedMain] com.sbi.ems.App                          : SBI EMS started. Navigate to /swagger-ui.html
 2026-04-15T12:13:08.504+05:30  WARN 11636 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=1m14s706ms947µs100ns).
 2026-04-15T12:25:16.242+05:30  WARN 11636 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=5m7s623ms306µs).
+2026-04-15T13:09:28.319+05:30  WARN 11636 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=2m11s391ms368µs).
+2026-04-15T13:22:40.265+05:30  WARN 11636 --- [Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2026-04-15T13:22:40.519+05:30  INFO 11636 --- [restartedMain] com.sbi.ems.App                          : Starting SBI Employee Management System...
+2026-04-15T13:22:43.550+05:30  INFO 11636 --- [restartedMain] com.sbi.ems.App                          : Starting App using Java 17.0.18 with PID 11636 (D:\Projects\sbi-apr-2026\sbi-eclipse-ws\ems\target\classes started by DELL in D:\Projects\sbi-apr-2026\sbi-eclipse-ws\ems)
+2026-04-15T13:22:43.551+05:30  INFO 11636 --- [restartedMain] com.sbi.ems.App                          : No active profile set, falling back to 1 default profile: "default"
+2026-04-15T13:22:44.640+05:30  WARN 11636 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-15T13:22:44.837+05:30  WARN 11636 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-15T13:22:45.443+05:30  WARN 11636 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c27804c6-291e-4bcd-b262-7b1a89cad208
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-15T13:22:45.615+05:30  WARN 11636 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #1 of file [D:\Projects\sbi-apr-2026\sbi-eclipse-ws\ems\target\classes\data.sql]: INSERT INTO roles (id, name, description, level) VALUES (1, 'JUNIOR_ENGINEER', 'Entry-level software engineer', 1), (2, 'ENGINEER', 'Mid-level software engineer', 2), (3, 'SENIOR_ENGINEER', 'Senior software engineer', 3), (4, 'TECH_LEAD', 'Technical lead for a team', 4), (5, 'PRINCIPAL_ENGINEER','Principal / Staff engineer', 5), (6, 'JUNIOR_ANALYST', 'Entry-level business analyst', 1), (7, 'ANALYST', 'Mid-level business analyst', 2), (8, 'MANAGER', 'People and delivery manager', 5), (9, 'HR_EXECUTIVE', 'HR executive — hiring and onboarding', 2), (10, 'HR_MANAGER', 'HR manager — policy and compliance', 4)
+2026-04-15T13:22:45.617+05:30  WARN 11636 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2026-04-15T13:22:45.643+05:30 ERROR 11636 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #1 of file [D:\Projects\sbi-apr-2026\sbi-eclipse-ws\ems\target\classes\data.sql]: INSERT INTO roles (id, name, description, level) VALUES (1, 'JUNIOR_ENGINEER', 'Entry-level software engineer', 1), (2, 'ENGINEER', 'Mid-level software engineer', 2), (3, 'SENIOR_ENGINEER', 'Senior software engineer', 3), (4, 'TECH_LEAD', 'Technical lead for a team', 4), (5, 'PRINCIPAL_ENGINEER','Principal / Staff engineer', 5), (6, 'JUNIOR_ANALYST', 'Entry-level business analyst', 1), (7, 'ANALYST', 'Mid-level business analyst', 2), (8, 'MANAGER', 'People and delivery manager', 5), (9, 'HR_EXECUTIVE', 'HR executive — hiring and onboarding', 2), (10, 'HR_MANAGER', 'HR manager — policy and compliance', 4)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.sbi.ems.App.main(App.java:22) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.5.jar:3.2.5]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of file [D:\Projects\sbi-apr-2026\sbi-eclipse-ws\ems\target\classes\data.sql]: INSERT INTO roles (id, name, description, level) VALUES (1, 'JUNIOR_ENGINEER', 'Entry-level software engineer', 1), (2, 'ENGINEER', 'Mid-level software engineer', 2), (3, 'SENIOR_ENGINEER', 'Senior software engineer', 3), (4, 'TECH_LEAD', 'Technical lead for a team', 4), (5, 'PRINCIPAL_ENGINEER','Principal / Staff engineer', 5), (6, 'JUNIOR_ANALYST', 'Entry-level business analyst', 1), (7, 'ANALYST', 'Mid-level business analyst', 2), (8, 'MANAGER', 'People and delivery manager', 5), (9, 'HR_EXECUTIVE', 'HR executive — hiring and onboarding', 2), (10, 'HR_MANAGER', 'HR manager — policy and compliance', 4)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-6.1.6.jar:6.1.6]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-6.1.6.jar:6.1.6]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-6.1.6.jar:6.1.6]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-6.1.6.jar:6.1.6]
+	... 23 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ROLES" not found (this database is empty); SQL statement:
+INSERT INTO roles (id, name, description, level) VALUES (1, 'JUNIOR_ENGINEER', 'Entry-level software engineer', 1), (2, 'ENGINEER', 'Mid-level software engineer', 2), (3, 'SENIOR_ENGINEER', 'Senior software engineer', 3), (4, 'TECH_LEAD', 'Technical lead for a team', 4), (5, 'PRINCIPAL_ENGINEER','Principal / Staff engineer', 5), (6, 'JUNIOR_ANALYST', 'Entry-level business analyst', 1), (7, 'ANALYST', 'Mid-level business analyst', 2), (8, 'MANAGER', 'People and delivery manager', 5), (9, 'HR_EXECUTIVE', 'HR executive — hiring and onboarding', 2), (10, 'HR_MANAGER', 'HR manager — policy and compliance', 4) [42104-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8051) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8035) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8024) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7990) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.parseInsert(Parser.java:1540) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.parsePrepared(Parser.java:719) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.parse(Parser.java:592) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.parse(Parser.java:564) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.prepareCommand(Parser.java:483) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.2.224.jar:2.2.224]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-6.1.6.jar:6.1.6]
+	... 33 common frames omitted
+
+2026-04-15T13:57:14.149+05:30  INFO 20532 --- [restartedMain] com.sbi.ems.App                          : Starting App using Java 17.0.18 with PID 20532 (D:\Projects\sbi-apr-2026\sbi-eclipse-ws\ems\target\classes started by DELL in D:\Projects\sbi-apr-2026\sbi-eclipse-ws\ems)
+2026-04-15T13:57:14.153+05:30  INFO 20532 --- [restartedMain] com.sbi.ems.App                          : No active profile set, falling back to 1 default profile: "default"
+2026-04-15T13:57:25.886+05:30  INFO 20532 --- [restartedMain] com.sbi.ems.security.JwtUtil             : JwtUtil initialised. Token expiry: 3600000 ms
+2026-04-15T13:57:27.566+05:30  WARN 20532 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-15T13:57:33.362+05:30  WARN 20532 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-15T13:57:36.277+05:30  INFO 20532 --- [restartedMain] com.sbi.ems.App                          : Started App in 22.836 seconds (process running for 31.288)
+2026-04-15T13:57:36.391+05:30  INFO 20532 --- [restartedMain] com.sbi.ems.App                          : SBI EMS started. Navigate to /swagger-ui.html
+2026-04-15T13:58:05.951+05:30  INFO 20532 --- [http-nio-8090-exec-5] com.sbi.ems.aop.AuditAspect              : [API] → AuthController.login(..)
+2026-04-15T13:58:07.667+05:30  INFO 20532 --- [http-nio-8090-exec-5] com.sbi.ems.aop.AuditAspect              : [API] ← AuthController.login(..) completed in 1734ms
+2026-04-15T13:58:31.710+05:30  INFO 20532 --- [http-nio-8090-exec-6] com.sbi.ems.aop.AuditAspect              : [API] → RoleController.getAllRoles()
+2026-04-15T13:58:32.221+05:30  INFO 20532 --- [http-nio-8090-exec-6] com.sbi.ems.aop.AuditAspect              : [API] ← RoleController.getAllRoles() completed in 511ms
