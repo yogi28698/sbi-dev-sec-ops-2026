@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
-
+import org.springframework.beans.factory.annotation.Value;
 /**
  * In-memory user store for training purposes.
  *
@@ -34,20 +34,31 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @Configuration
 public class EmsUserDetailsService {
 
-    @Bean
+	@Value("${app.security.admin.username}")
+	private String adminUsername;
+
+	@Value("${app.security.admin.password}")
+	private String adminPassword;
+
+	@Value("${app.security.user.username}")
+	private String username;
+
+	@Value("${app.security.user.password}")
+	private String userPassword;
+	@Bean
     public UserDetailsService userDetailsService(PasswordEncoder encoder) {
 
         // ADMIN — HR team: full access including salary fields
         UserDetails admin = User.builder()
-                .username("hr.admin")
-                .password(encoder.encode("Admin@SBI123"))
+                .username(adminUsername)
+                .password(encoder.encode(adminPassword))
                 .roles("ADMIN", "USER")
                 .build();
 
         // USER — Regular employee: limited access, salary masked
         UserDetails user = User.builder()
-                .username("emp.user")
-                .password(encoder.encode("User@SBI123"))
+                .username(username)
+                .password(encoder.encode(userPassword))
                 .roles("USER")
                 .build();
 
