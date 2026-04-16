@@ -76,15 +76,6 @@ jobs:
           -x zap-report.xml \
           -J zap-report.json
 
- #  Upload ZAP Reports
-    - name: Upload ZAP Report
-      uses: actions/upload-artifact@v4
-      with:
-        name: zap-reports
-        path: |
-          zap-report.html
-          zap-report.xml
-          zap-report.json
 
     # ── 8. Cleanup ───────────────────────────────────────────────
     - name: Stop container
